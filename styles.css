@@ -1,0 +1,246 @@
+:root {
+    --bg-color: #0c0f12;
+    --card-bg: #121619;
+    --input-bg: #1a1f24;
+    --input-border: #2c3238;
+    --text-primary: #f5f5f5;
+    --text-muted: #8e8e8e;
+    --btn-primary: #0052cc;
+    --btn-hover: #0043a8;
+    --btn-secondary: #1f262d;
+    --pink-accent: #e1306c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-container {
+    display: flex;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+/* الجانب الأيسر */
+.hero-section {
+    max-width: 450px;
+}
+
+.insta-icon svg {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.highlight-close {
+    color: var(--pink-accent);
+}
+
+.hero-cards {
+    position: relative;
+    height: 250px;
+}
+
+.card {
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #222;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-left {
+    transform: rotate(-10deg);
+    left: 10px;
+    z-index: 1;
+}
+
+.card-center {
+    transform: rotate(0deg);
+    left: 100px;
+    top: -20px;
+    z-index: 2;
+}
+
+.card-right {
+    transform: rotate(10deg);
+    left: 190px;
+    z-index: 1;
+}
+
+/* الجانب الأيمن (نموذج الدخول) */
+.auth-section {
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.auth-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#loginForm {
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #555;
+}
+
+.btn-login {
+    width: 100%;
+    background-color: var(--btn-primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 12px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: var(--btn-hover);
+}
+
+.forgot-pass {
+    color: var(--text-primary);
+    font-size: 13px;
+    text-decoration: none;
+    margin: 20px 0;
+    font-weight: 500;
+}
+
+.btn-facebook {
+    width: 100%;
+    background-color: var(--btn-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--input-border);
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.btn-facebook svg {
+    width: 18px;
+    height: 18px;
+}
+
+.btn-create-account {
+    width: 100%;
+    background-color: transparent;
+    color: #3897f0;
+    border: 1px solid #1f262d;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.meta-logo {
+    margin-top: 30px;
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* الشريط السفلي */
+footer {
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* متجاوب مع الشاشات الصغيرة */
+@media (max-width: 850px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .hero-section {
+        display: none;
+    }
+}
